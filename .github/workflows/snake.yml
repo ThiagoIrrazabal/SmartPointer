@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 5 * * *" 
+    - cron: "0 5 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v3
 
 
       - name: Generate Snake Game from Contributions
-        uses: Platane/snk@v2
+        uses: Platane/snk@v3
         with:
           github_user_name: ThiagoIrrazabal
           outputs: dist/snake.svg
