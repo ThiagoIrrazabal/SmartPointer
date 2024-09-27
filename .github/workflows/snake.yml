@@ -1,5 +1,8 @@
 name: Generate Snake
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 5 * * *"
