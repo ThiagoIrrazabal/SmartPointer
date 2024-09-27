@@ -60,3 +60,7 @@ To access the object managed by the `SmartPointer`, you can directly call method
 
 ```delphi
 MyPointer.DoSomething;  // No need to call Invoke
+````
+
+### Contribuições:
+![Snake animation](https://github.com/ThiagoIrrazabal/SmartPointer/blob/main/dist/snake.svg)
