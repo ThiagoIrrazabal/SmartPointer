@@ -1,5 +1,11 @@
 # SmartPointer for Delphi
 
+![GitHub Contributors](https://img.shields.io/github/contributors/ThiagoIrrazabal/SmartPointer)
+![GitHub Forks](https://img.shields.io/github/forks/ThiagoIrrazabal/SmartPointer?style=social)
+![GitHub Issues](https://img.shields.io/github/issues/ThiagoIrrazabal/SmartPointer)
+![GitHub Stars](https://img.shields.io/github/stars/ThiagoIrrazabal/SmartPointer?style=social)
+![GitHub License](https://img.shields.io/github/license/ThiagoIrrazabal/SmartPointer)
+
 This unit provides a generic `SmartPointer` class in Delphi, designed to manage object lifecycle automatically, acting as a garbage collector. It simplifies memory management by ensuring that objects are automatically freed when they are no longer needed, thus preventing memory leaks.
 
 ## Overview
