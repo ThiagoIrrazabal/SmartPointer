@@ -71,6 +71,29 @@ begin
   MyPointer.DoSomething; // Access the object through the smart pointer
 end; // The object is freed automatically
 ````
+
+Another example: Using TClientDataSet and Accessing Fields
+
+The `SmartPointer` can also be used with database components, such as `TClientDataSet`. Here's an example showing how to create and access fields in `TClientDataSet`:
+
+```delphi
+uses
+  Data.DB, Datasnap.DBClient, Classe.SmartPointer;
+
+var
+  ClientDataSetPointer: ISmartPointer<TClientDataSet>;
+begin
+  ClientDataSetPointer := TSmartPointer<TClientDataSet>.Create(TClientDataSet.Create(nil));
+  // Note: You need to define the fields here before calling CreateDataSet
+  ClientDataSetPointer.CreateDataSet;
+  ClientDataSetPointer.Append;
+  ClientDataSetPointer.FieldByName('MyField').AsString := 'Hello, World!';
+  ClientDataSetPointer.Post;
+
+  // Access data
+  ShowMessage(ClientDataSetPointer.FieldByName('MyField').AsString);
+end; // TClientDataSet is freed automatically
+````
 ### Accessing the Object
 
 To access the object managed by the `SmartPointer`, you can directly call methods or access properties without needing to invoke any specific method. The `SmartPointer` automatically handles the reference to the object.
