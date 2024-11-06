@@ -42,7 +42,18 @@ begin
 end; // Object is automatically freed when the reference goes out of scope
 ````
 Option 2: Using an Existing Object
-Alternatively, you can pass an already instantiated object to the `SmartPointer`:
+Alternatively, create the `SmartPointer` with an already instantiated object:
+
+```delphi
+var
+  MyPointer: ISmartPointer<TMyClass>;
+begin
+  MyPointer := TSmartPointer<TMyClass>.Create(TMyClass.Create);
+  MyPointer.DoSomething; // Access the object through the smart pointer
+end; // The object is freed automatically
+````
+Option 3: Using an Existing Object with Separate Instantiation
+You can also pass a pre-existing, separately instantiated object to the `SmartPointer`:
 
 ```delphi
 var
