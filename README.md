@@ -29,8 +29,10 @@ To use the `SmartPointer` class in your project, include the `Classe.SmartPointe
 uses
   Classe.SmartPointer;
 ````
-Creating a `SmartPointer`
+
+## Creating a `SmartPointer`
 Option 1: Automatic Object Creation
+
 You can create a `SmartPointer` that will automatically instantiate the object:
 
 ```delphi
@@ -41,7 +43,9 @@ begin
   MyPointer.DoSomething; // Access your object as needed
 end; // Object is automatically freed when the reference goes out of scope
 ````
+
 Option 2: Using an Existing Object
+
 Alternatively, create the `SmartPointer` with an already instantiated object:
 
 ```delphi
@@ -52,7 +56,9 @@ begin
   MyPointer.DoSomething; // Access the object through the smart pointer
 end; // The object is freed automatically
 ````
+
 Option 3: Using an Existing Object with Separate Instantiation
+
 You can also pass a pre-existing, separately instantiated object to the `SmartPointer`:
 
 ```delphi
