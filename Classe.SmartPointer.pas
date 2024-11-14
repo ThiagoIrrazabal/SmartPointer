@@ -23,7 +23,7 @@ type
     destructor Destroy; override;
     function Invoke: T;
   published
-  	property Value: T read FValue write FValue;
+    property Value: T read FValue write FValue;
   end;
 
 implementation
@@ -32,7 +32,7 @@ implementation
 
 constructor TSmartPointer<T>.Create;
 begin
-	inherited;
+  inherited;
   FValue := T.Create;
 end;
 
@@ -41,7 +41,7 @@ var
   lValueCreate: TDictionary<Pointer, TProc>;
   lValueProc: TProc;
 begin
-	inherited Create;
+  inherited Create;
   FValue := AValue;
   lValueCreate := TDictionary<Pointer, TProc>.Create;
   try
@@ -56,7 +56,7 @@ end;
 
 destructor TSmartPointer<T>.Destroy;
 begin
-	FValue.Free;
+  FValue.Free;
   inherited;
 end;
 
@@ -67,7 +67,7 @@ end;
 
 function TSmartPointer<T>.Invoke: T;
 begin
-	Result := FValue;
+  Result := FValue;
 end;
 
 procedure TSmartPointer<T>.ValueCreate;
